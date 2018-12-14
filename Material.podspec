@@ -11,9 +11,12 @@ Pod::Spec.new do |s|
 
 	s.default_subspec = 'Core'
 	s.platform = :ios, '8.0'
+	s.tvos.deployment_target = '9.0'
 
 	s.subspec 'Core' do |s|
 		s.ios.deployment_target = '8.0'
+		s.tvos.deployment_target = '9.0'
+		s.tvos.source_files = 'Sources/**/*.swift'
 		s.ios.source_files = 'Sources/**/*.swift'
 		s.requires_arc = true
 		s.resource_bundles = {
@@ -21,6 +24,6 @@ Pod::Spec.new do |s|
 			'com.cosmicmind.material.fonts' => ['Sources/**/*.ttf']
 		}
 
-		s.dependency 'Motion', '~> 1.4.3'
+		s.dependency 'Motion', :git => 'https://github.com/cmoulton/Material.git'
 	end
 end
