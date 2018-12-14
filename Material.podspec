@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
 			'com.cosmicmind.material.fonts' => ['Sources/**/*.ttf']
 		}
 
-		s.dependency 'Motion', :git => 'https://github.com/cmoulton/Material.git'
+		s.dependency 'Motion',  '~> 1.4.3'
 	end
 end
